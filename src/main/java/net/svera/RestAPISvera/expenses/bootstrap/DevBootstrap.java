@@ -39,7 +39,11 @@ public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent> 
         product.setName("Product");
         product.setExpensecategory(food);
         Date date = new Date();
-        Expense bread = new Expense("Bread", date, 2.53, product);
+        Expense bread = new Expense();
+        bread.setName("Bread");
+        bread.setDate(date);
+        bread.setPrice(2.53);
+        bread.setSubcategory(product);
         bread.setLocation("Makro");
         bread.setUnit("pc");
         Date expireDate = new Date(date.getTime()+(1000*60*60*24*7));
@@ -52,7 +56,11 @@ public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent> 
 
         //Milk
 
-        Expense milk = new Expense("Milk", date, 2.15, product);
+        Expense milk = new Expense();
+        milk.setName("Milk");
+        milk.setDate(date);
+        milk.setPrice(2.15);
+        milk.setSubcategory(product);
         milk.setLocation("Makro");
         milk.setUnit("pc");
         Date expireDateMilk = new Date(date.getTime()+(1000*60*60*24*14));
@@ -67,7 +75,11 @@ public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent> 
         Subcategory mobile = new Subcategory();
         mobile.setName("Mobile");
         mobile.setExpensecategory(services);
-        Expense mobilePhone = new Expense("Mobile phone", date, 60, mobile);
+        Expense mobilePhone = new Expense();
+        mobilePhone.setName("Mobile phone");
+        mobilePhone.setDate(date);
+        mobilePhone.setPrice(60);
+        mobilePhone.setSubcategory(mobile);
         mobilePhone.setLocation("Plus");
         mobilePhone.setUnit("month");
 
