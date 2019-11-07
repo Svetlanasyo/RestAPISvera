@@ -8,16 +8,16 @@ import java.util.Date;
 
 @Data
 @Entity
-@Table(name="EXPENSE")
+@Table(name="expense")
 public class Expense {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String location;
-    @NonNull private String name;
+    private String name;
     @NonNull private Date date;
-    @NonNull  private double price;
+    private double price;
     private double quantity;
     private String unit;
     private Date expireDate;
