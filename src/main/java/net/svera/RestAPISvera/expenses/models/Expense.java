@@ -26,4 +26,6 @@ public class Expense {
     @JoinColumn(name="subcategory_id", nullable = false)
     @NonNull private Subcategory subcategory;
 
+    public Expense() {
+    }
 }
