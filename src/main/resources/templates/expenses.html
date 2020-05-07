@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List of expenses</title>
+</head>
+<body>
+    <h1>Expense List</h1>
+
+<table>
+    <tr>
+        <th>Category</th>
+        <th>Subcategory</th>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Unit</th>
+        <th>Expire date</th>
+    </tr>
+    <tr th:each="expense: ${expenses}">
+        <td th:text="${expense.subcategory.expensecategory.name}"></td>
+        <td th:text="${expense.subcategory.name}"></td>
+        <td th:text="${expense.name}"></td>
+        <td th:text="${expense.date}"></td>
+        <td th:text="${expense.price}"></td>
+        <td th:text="${expense.quantity}"></td>
+        <td th:text="${expense.unit}"></td>
+        <td th:text="${expense.expireDate}"></td>
+    </tr>
+</table>
+</body>
+</html>
